@@ -1,5 +1,7 @@
 # Curriculum Vitae — Silvio Valerio De Pasquale
 
+![Build CV](https://github.com/svdepasquale/curriculum-vitae/actions/workflows/build.yml/badge.svg)
+
 Senior Engineering Manager — Cloud, Data & Platform.
 
 **Latest PDF:** [Download](https://github.com/svdepasquale/curriculum-vitae/releases/latest/download/cv.pdf)

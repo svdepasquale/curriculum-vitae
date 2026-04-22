@@ -11,6 +11,15 @@ permissions:
   contents: write
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install chktex
+        run: sudo apt-get update && sudo apt-get install -y chktex
+      - name: Run chktex (soft-fail - warnings visible in logs, does not block)
+        run: chktex -q cv.tex || true
+
   build:
     runs-on: ubuntu-latest
     steps:
