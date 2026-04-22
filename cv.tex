@@ -1,0 +1,127 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Helvetica Neue}[Scale=0.95]
+\usepackage[a4paper,top=1.4cm,bottom=1.4cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true,urlcolor=accent}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-6pt}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill \textcolor{muted}{#3}\\[-2pt]
+  \textit{#2} \hfill \textcolor{muted}{\textit{#4}}\par\vspace{2pt}
+}
+
+\setlist[itemize]{leftmargin=1.1em,topsep=2pt,itemsep=1pt,parsep=0pt}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+  {\Huge\bfseries\color{accent} Silvio Valerio De Pasquale}\\[4pt]
+  {\large Senior Engineering Manager \textemdash{} Cloud, Data \& Platform}\\[6pt]
+  \small
+  \href{mailto:silvio@depasquale.dev}{silvio@depasquale.dev} \; $\diamond$ \;
+  Como, Italy \; $\diamond$ \;
+  \href{https://linkedin.com/in/svdepasquale}{linkedin.com/in/svdepasquale} \; $\diamond$ \;
+  \href{https://github.com/svdepasquale}{github.com/svdepasquale} \; $\diamond$ \;
+  \href{https://silvio.depasquale.dev}{silvio.depasquale.dev}
+\end{center}
+
+% --- Summary ---
+\section*{Profile}
+Engineering leader with 10+ years in cloud and platform engineering, currently managing managers and staff engineers across Cloud, Platform, Operations and Data at Satispay (a European fintech serving 5M+ users). I scale teams and platforms together: at Satispay I grew the Cloud \& Data organization from 1 to 15+ engineers and the production footprint from 20 to 150+ microservices, shifting operations from a ticket-based model to a platform-as-a-product practice. I care about technical depth, clear career frameworks, and building the kind of internal developer experience that lets product teams ship with confidence.
+
+% --- Experience ---
+\section*{Experience}
+
+\role{Senior Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy (Hybrid)}{Apr 2026 -- Present}{}
+\begin{itemize}
+  \item Manager of managers for the Cloud, Platform, Operations and Data Engineering area; line-manage the managers of Platform and Operations and the staff engineers across the group.
+  \item Accountable for the technical strategy and people development of \textasciitilde{}15 engineers covering cloud infrastructure, internal developer platform, production operations and the data platform.
+  \item Championed the strategic vision for adopting \textbf{Kubernetes-based workloads} and a \textbf{modern APM observability stack}, shaping the next-generation platform's edge, service-to-service traffic management and developer experience.
+  \item Primary technical contact with AWS (TAM engagement, Well-Architected Reviews, roadmap alignment) and owner of multi-account governance, security posture and compliance controls.
+\end{itemize}
+
+\role{Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy}{Mar 2025 -- Apr 2026}{}
+\begin{itemize}
+  \item Led the 10+ engineer Cloud \& Data team (infrastructure, data platform, security), reporting to the CTO as primary AWS technical reference.
+  \item Introduced career frameworks, hiring and onboarding processes; grew staff engineering and first-line management layers inside the team.
+  \item Shaped the platform-engineering roadmap and standards: golden paths, GitHub Actions CI/CD, IaC (Terraform, CloudFormation), multi-account AWS governance.
+\end{itemize}
+
+\role{Associate Cloud Engineering Manager / Cloud Team Lead}{Satispay \textbullet{} Milan, Italy}{May 2022 -- Mar 2025}{}
+\begin{itemize}
+  \item Scaled the production platform from 20 to 150+ microservices while maintaining high availability for a payments workload.
+  \item Built the Cloud \& Data team from 1 to 10+ engineers, establishing hiring bar, onboarding, engineering standards and on-call practices.
+  \item Led the infrastructure build-out of Satispay's \textbf{data platform} on AWS building blocks -- SNS event ingestion, Kinesis Firehose pipelines, Redshift as the warehouse, S3 as landing/archival layer -- with \textbf{dbt} on top for modelling and transformation.
+  \item Transformed operations from ticket-based support into a platform-as-product model with reusable modules and self-service automation.
+\end{itemize}
+
+\role{Senior Cloud Engineer / Cloud Architect}{Satispay \textbullet{} Milan, Italy}{Oct 2020 -- May 2022}{}
+\begin{itemize}
+  \item Led the AWS handover from an external consultancy: knowledge transfer, stabilisation and full internal ownership of the platform.
+  \item Primary engineer on VPC networking, ECS/EC2 compute, RDS/DynamoDB data stores, S3, SQS/SNS and CloudWatch observability.
+\end{itemize}
+
+\role{Senior IT Consultant / Cloud Architect / Project Manager}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Apr 2019 -- Oct 2020}{}
+\begin{itemize}
+  \item Delivered Oracle Cloud migrations for major Italian enterprise clients across telco, insurance, healthcare no-profit and real estate: presales, TCO analysis, project management and delivery.
+  \item Acted as customer TAM: SLA management, 24/7 on-call on 100+ node estates, ITIL incident/problem/change processes.
+\end{itemize}
+
+\role{IT Consultant / Cloud Architect}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Jun 2016 -- Apr 2019}{}
+\begin{itemize}
+  \item Delivered Oracle Cloud IaaS/PaaS implementations: hybrid connectivity (IPsec, FastConnect), middleware (WebLogic, Tomcat, nginx) in HA.
+  \item Designed cloud networking and monitoring (Zabbix, Nagios, ELK); built internal cloud services and REST APIs.
+\end{itemize}
+
+% --- Skills ---
+\section*{Selected Skills}
+\textbf{Leadership:}\ manager of managers, staff+ engineer coaching, hiring, career frameworks, org design, platform-as-a-product.\\
+\textbf{Cloud \& Platform:}\ AWS (Organizations, IAM Identity Center, ECS/Fargate, EC2, RDS, DynamoDB, S3, VPC, Security Hub, Config), Kubernetes, ArgoCD, Helm, Oracle Cloud.\\
+\textbf{Service Mesh \& Networking:}\ Cilium, VPC design, traffic management, IPsec/VPN, WAF and edge security, IAM, multi-account governance.\\
+\textbf{Data:}\ SNS/Kinesis event ingestion, Firehose, Redshift, S3 lakehouse patterns, dbt for modelling and transformation.\\
+\textbf{IaC \& Delivery:}\ Terraform, CloudFormation, GitHub Actions, GitOps.\\
+\textbf{Observability \& Reliability:}\ Grafana APM stack (Prometheus, Loki, Tempo, Grafana Alloy), CloudWatch, on-call and incident practices.
+
+% --- Certifications ---
+\section*{Certifications}
+\begin{itemize}
+  \item AWS Certified Developer -- Associate \hfill \textcolor{muted}{Jul 2024 -- Jul 2027}
+  \item AWS Certified SysOps Administrator -- Associate \hfill \textcolor{muted}{Feb 2023 -- Feb 2026}
+  \item AWS Certified Solutions Architect -- Associate \hfill \textcolor{muted}{Jun 2021 -- Jun 2024}
+  \item ITIL v4 Foundation, AXELOS \hfill \textcolor{muted}{Dec 2019}
+  \item Oracle Cloud Infrastructure -- Architect \& Operations, Oracle DB 12c, Oracle Linux 6 \hfill \textcolor{muted}{2016 -- 2020}
+\end{itemize}
+
+% --- Education ---
+\section*{Education}
+\role{MSc in Computer Science and Engineering}{Politecnico di Milano \textbullet{} Communication and Society Engineering (English track)}{2009 -- 2016}{}
+\vspace{-2pt}
+Grade: 109/110. Thesis: \textit{Analysis of Approximation Techniques for Parallel Computing Applications}.
+
+% --- Languages ---
+\section*{Languages}
+Italian (native) \quad\textbullet\quad English (professional working proficiency -- TOEIC 785/900, CEFR B2)
+
+\vfill
+{\scriptsize\color{muted}
+\textcopyright{} 2026 Silvio Valerio De Pasquale. Source: \href{https://github.com/svdepasquale/curriculum-vitae}{github.com/svdepasquale/curriculum-vitae}.\\
+I authorise the processing of my personal data contained in this CV in accordance with Regulation (EU) 2016/679 (GDPR) and Italian Legislative Decree 196/2003 as amended by D.Lgs. 101/2018.
+}
+
+\end{document}

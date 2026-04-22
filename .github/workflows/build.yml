@@ -1,0 +1,46 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Tectonic
+        uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile CV
+        run: tectonic cv.tex
+
+      - name: Verify PDF was produced
+        run: test -s cv.pdf
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: cv.pdf
+          retention-days: 30
+
+      - name: Publish to 'latest' release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          body: |
+            Automatically built from commit ${{ github.sha }} on ${{ github.event.head_commit.timestamp }}.
+          files: cv.pdf
+          make_latest: true
