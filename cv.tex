@@ -12,7 +12,7 @@
 \usepackage[a4paper,top=1.4cm,bottom=1.4cm,left=1.6cm,right=1.6cm]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{parskip}
 
@@ -22,14 +22,13 @@
 \hypersetup{colorlinks=true,urlcolor=accent}
 
 \pagestyle{empty}
-\setlength{\parindent}{0pt}
 
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-6pt}\rule{\linewidth}{0.6pt}]
 \titlespacing*{\section}{0pt}{10pt}{4pt}
 
-\newcommand{\role}[4]{%
+\newcommand{\role}[3]{%
   \textbf{#1} \hfill \textcolor{muted}{#3}\\[-2pt]
-  \textit{#2} \hfill \textcolor{muted}{\textit{#4}}\par\vspace{2pt}
+  \textit{#2}\par\vspace{2pt}
 }
 
 \setlist[itemize]{leftmargin=1.1em,topsep=2pt,itemsep=1pt,parsep=0pt}
@@ -55,7 +54,7 @@ Engineering leader with 10+ years in cloud and platform engineering, currently m
 % --- Experience ---
 \section*{Experience}
 
-\role{Senior Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy (Hybrid)}{Apr 2026 -- Present}{}
+\role{Senior Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy (Hybrid)}{Apr 2026 -- Present}
 \begin{itemize}
   \item Manager of managers for the Cloud, Platform, Operations and Data Engineering area; line-manage the managers of Platform and Operations and the staff engineers across the group.
   \item Accountable for the technical strategy and people development of \textasciitilde{}15 engineers covering cloud infrastructure, internal developer platform, production operations and the data platform.
@@ -63,14 +62,14 @@ Engineering leader with 10+ years in cloud and platform engineering, currently m
   \item Primary technical contact with AWS (TAM engagement, Well-Architected Reviews, roadmap alignment) and owner of multi-account governance, security posture and compliance controls.
 \end{itemize}
 
-\role{Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy}{Mar 2025 -- Apr 2026}{}
+\role{Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy}{Mar 2025 -- Apr 2026}
 \begin{itemize}
   \item Led the 10+ engineer Cloud \& Data team (infrastructure, data platform, security), reporting to the CTO as primary AWS technical reference.
   \item Introduced career frameworks, hiring and onboarding processes; grew staff engineering and first-line management layers inside the team.
   \item Shaped the platform-engineering roadmap and standards: golden paths, GitHub Actions CI/CD, IaC (Terraform, CloudFormation), multi-account AWS governance.
 \end{itemize}
 
-\role{Associate Cloud Engineering Manager / Cloud Team Lead}{Satispay \textbullet{} Milan, Italy}{May 2022 -- Mar 2025}{}
+\role{Associate Cloud Engineering Manager / Cloud Team Lead}{Satispay \textbullet{} Milan, Italy}{May 2022 -- Mar 2025}
 \begin{itemize}
   \item Scaled the production platform from 20 to 150+ microservices while maintaining high availability for a payments workload.
   \item Built the Cloud \& Data team from 1 to 10+ engineers, establishing hiring bar, onboarding, engineering standards and on-call practices.
@@ -78,19 +77,19 @@ Engineering leader with 10+ years in cloud and platform engineering, currently m
   \item Transformed operations from ticket-based support into a platform-as-product model with reusable modules and self-service automation.
 \end{itemize}
 
-\role{Senior Cloud Engineer / Cloud Architect}{Satispay \textbullet{} Milan, Italy}{Oct 2020 -- May 2022}{}
+\role{Senior Cloud Engineer / Cloud Architect}{Satispay \textbullet{} Milan, Italy}{Oct 2020 -- May 2022}
 \begin{itemize}
   \item Led the AWS handover from an external consultancy: knowledge transfer, stabilisation and full internal ownership of the platform.
   \item Primary engineer on VPC networking, ECS/EC2 compute, RDS/DynamoDB data stores, S3, SQS/SNS and CloudWatch observability.
 \end{itemize}
 
-\role{Senior IT Consultant / Cloud Architect / Project Manager}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Apr 2019 -- Oct 2020}{}
+\role{Senior IT Consultant / Cloud Architect / Project Manager}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Apr 2019 -- Oct 2020}
 \begin{itemize}
   \item Delivered Oracle Cloud migrations for major Italian enterprise clients across telco, insurance, healthcare no-profit and real estate: presales, TCO analysis, project management and delivery.
   \item Acted as customer TAM: SLA management, 24/7 on-call on 100+ node estates, ITIL incident/problem/change processes.
 \end{itemize}
 
-\role{IT Consultant / Cloud Architect}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Jun 2016 -- Apr 2019}{}
+\role{IT Consultant / Cloud Architect}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Jun 2016 -- Apr 2019}
 \begin{itemize}
   \item Delivered Oracle Cloud IaaS/PaaS implementations: hybrid connectivity (IPsec, FastConnect), middleware (WebLogic, Tomcat, nginx) in HA.
   \item Designed cloud networking and monitoring (Zabbix, Nagios, ELK); built internal cloud services and REST APIs.
@@ -117,7 +116,7 @@ Engineering leader with 10+ years in cloud and platform engineering, currently m
 
 % --- Education ---
 \section*{Education}
-\role{MSc in Computer Science and Engineering}{Politecnico di Milano \textbullet{} Communication and Society Engineering (English track)}{2009 -- 2016}{}
+\role{MSc in Computer Science and Engineering}{Politecnico di Milano \textbullet{} Communication and Society Engineering (English track)}{2009 -- 2016}
 \vspace{-2pt}
 Grade: 109/110. Thesis: \textit{Analysis of Approximation Techniques for Parallel Computing Applications}.
 
