@@ -1,0 +1,144 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{texgyreheros}[
+  Extension = .otf,
+  UprightFont = *-regular,
+  BoldFont = *-bold,
+  ItalicFont = *-italic,
+  BoldItalicFont = *-bolditalic,
+  Scale = 0.95
+]
+\usepackage[a4paper,top=1.4cm,bottom=1.4cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{needspace}
+
+\definecolor{accent}{HTML}{1F3A5F}
+\definecolor{muted}{HTML}{555555}
+
+\hypersetup{colorlinks=true,urlcolor=accent}
+
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-6pt}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+\newcommand{\role}[3]{%
+  \needspace{5\baselineskip}%
+  \textbf{#1} \hfill \textcolor{muted}{#3}\\[-2pt]
+  \textit{#2}\par\vspace{2pt}
+}
+
+\setlist[itemize]{leftmargin=1.1em,topsep=2pt,itemsep=1pt,parsep=0pt}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+  {\Huge\bfseries\color{accent} Silvio Valerio De Pasquale}\\[4pt]
+  {\large Senior Engineering Manager \textemdash{} Cloud, Data \& Platform}\\[6pt]
+  \small
+  \href{mailto:silvio@depasquale.dev}{silvio@depasquale.dev} \;|\;
+  Como, Italy \;|\;
+  \href{https://linkedin.com/in/svdepasquale}{linkedin.com/in/svdepasquale} \;|\;
+  \href{https://github.com/svdepasquale}{github.com/svdepasquale} \;|\;
+  \href{https://silvio.depasquale.dev}{silvio.depasquale.dev}
+\end{center}
+
+% --- Summary ---
+\section*{Profile}
+Engineering leader with 10+ years in cloud and platform engineering, currently managing managers and staff engineers across Cloud, Platform, Operations and Data at Satispay (a European fintech serving 5M+ users).
+
+I scale teams and platforms together: grew the Cloud \& Data organisation from 1 to 10+ engineers with zero turnover, and the production footprint from 20 to 150+ microservices, shifting operations from a ticket-based model to a platform-as-a-product practice.
+
+I care about technical depth, clear career frameworks, and the kind of internal developer experience that lets product teams ship with confidence.
+
+% --- Experience ---
+\section*{Experience}
+
+\role{Senior Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy (Hybrid)}{Apr 2026 -- Present}
+\begin{itemize}
+  \item Manager of managers for the Cloud, Platform, Operations and Data Engineering area; line-manage the managers of Platform and Operations and the staff engineers across the group.
+  \item Accountable for the technical strategy and people development of 10+ engineers (plus product and senior staff partners) covering cloud infrastructure, internal developer platform, production operations and the data platform.
+  \item Driving the next phase of the \textbf{Kubernetes platform} (foundational layer already in production): internal service-to-service traffic management, service mesh adoption and a \textbf{modern APM observability stack}, shaping edge patterns and developer experience.
+  \item Maintain a \textbf{99.95\% production SLA} on the payments platform while continuing organisational and architectural change.
+  \item Primary technical contact with cloud vendor (TAM engagement, Well-Architected Reviews, roadmap alignment) and owner of multi-account governance, security posture and compliance controls.
+\end{itemize}
+
+\role{Cloud Engineering Manager}{Satispay \textbullet{} Milan, Italy}{Mar 2025 -- Apr 2026}
+\begin{itemize}
+  \item Grew the Cloud \& Data team from 1 to 10+ engineers with \textbf{zero turnover over 6 years} across hot-market hiring conditions; covered infrastructure, data platform and security, reporting to the CTO as primary cloud technical reference.
+  \item Introduced career frameworks, hiring and onboarding processes; grew staff engineering and first-line management layers inside the team.
+  \item Shaped the platform-engineering roadmap and standards: golden paths, GitHub Actions CI/CD, IaC (Terraform, CloudFormation), multi-account AWS governance.
+  \item Shipped an \textbf{internal developer portal} for product-team self-service, with selected operations (e.g.\ alarm provisioning) running as \textbf{fully agentic flows} guarded by \textbf{policy-as-code} in CI; drove a \textbf{30\% reduction in tickets} to the Cloud team within months of rollout.
+  \item Led the \textbf{foundational introduction of Kubernetes} to the platform, delivering the first production workload and the GitOps layer in parallel.
+\end{itemize}
+
+\role{Associate Cloud Engineering Manager / Cloud Team Lead}{Satispay \textbullet{} Milan, Italy}{May 2022 -- Mar 2025}
+\begin{itemize}
+  \item Scaled the production platform from 20 to 150+ microservices while maintaining high availability for a payments workload.
+  \item Established hiring bar, onboarding, engineering standards and on-call practices for the growing Cloud \& Data team.
+  \item Led the infrastructure build-out of Satispay's \textbf{data platform} on AWS building blocks -- SNS event ingestion, Kinesis Firehose pipelines, Redshift as the warehouse, S3 as landing/archival layer -- with \textbf{dbt} on top for modelling and transformation.
+  \item Led the \textbf{edge gateway redesign} after DDoS / abusive traffic incidents: edge pattern blocking (WAF), geographic rate limiting on hot paths and per-endpoint isolation, replacing all-or-nothing throttling with surgical mitigation.
+\end{itemize}
+
+\role{Senior Cloud Engineer / Cloud Architect}{Satispay \textbullet{} Milan, Italy}{Oct 2020 -- May 2022}
+\begin{itemize}
+  \item Led the AWS handover from an external consultancy: knowledge transfer, stabilisation and full internal ownership of the platform.
+  \item \textbf{Terraformed the entire AWS footprint} by importing existing resources, \textbf{redesigned the VPC networking topology}, and rolled out \textbf{end-to-end CI/CD} where coverage was previously partial.
+\end{itemize}
+
+\role{Senior IT Consultant / Cloud Architect / Project Manager}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Apr 2019 -- Oct 2020}
+\begin{itemize}
+  \item Delivered Oracle Cloud migrations for major Italian enterprise clients across telco, insurance, healthcare no-profit and real estate: presales, TCO analysis, project management and delivery.
+  \item Acted as customer TAM: SLA management, 24/7 on-call on 100+ node estates, ITIL incident/problem/change processes.
+\end{itemize}
+
+\role{IT Consultant / Cloud Architect}{Reply S.p.A. (Red Reply) \textbullet{} Milan, Italy}{Jun 2016 -- Apr 2019}
+\begin{itemize}
+  \item Delivered Oracle Cloud IaaS/PaaS implementations: hybrid connectivity (IPsec, FastConnect), middleware (WebLogic, Tomcat, nginx) in HA.
+  \item Designed cloud networking and monitoring (Zabbix, Nagios, ELK); built internal cloud services and REST APIs.
+\end{itemize}
+
+% --- Skills ---
+\section*{Selected Skills}
+\textbf{Leadership:}\ manager of managers, staff+ engineer coaching, hiring, career frameworks, org design, platform-as-a-product.\\
+\textbf{Cloud \& Platform:}\ AWS (Organizations, IAM Identity Center, ECS/Fargate, EC2, RDS, DynamoDB, S3, VPC, Security Hub, Config), Kubernetes, ArgoCD, Helm, Oracle Cloud.\\
+\textbf{Networking \& Edge:}\ VPC design, service-to-service traffic management, service mesh adoption, IPsec/VPN, WAF and edge security, IAM, multi-account governance.\\
+\textbf{Data:}\ SNS/Kinesis event ingestion, Firehose, Redshift, S3 lakehouse patterns, dbt for modelling and transformation.\\
+\textbf{IaC \& Delivery:}\ Terraform, CloudFormation, GitHub Actions, GitOps.\\
+\textbf{Observability \& Reliability:}\ Grafana APM stack (Prometheus, Loki, Tempo, Grafana Alloy), CloudWatch, on-call and incident practices.\\
+\textbf{AI Engineering Workflow:}\ LLM-augmented engineering and management workflows via MCP-based tool integration (issue trackers, chat, infra), persistent local-context patterns for longitudinal memory, and privacy-preserving agentic stacks.
+
+% --- Certifications ---
+\section*{Certifications}
+\begin{itemize}
+  \item AWS Certified Developer -- Associate \hfill \textcolor{muted}{Jul 2024 -- Jul 2027}
+  \item AWS Certified SysOps Administrator -- Associate \hfill \textcolor{muted}{Feb 2023 -- Feb 2026}
+  \item AWS Certified Solutions Architect -- Associate \hfill \textcolor{muted}{Jun 2021 -- Jun 2024}
+  \item Certificate of Competence in English (CEFR B2), ICIMS \hfill \textcolor{muted}{Aug 2022 -- Jul 2024}
+  \item ITIL v4 Foundation, AXELOS \hfill \textcolor{muted}{Dec 2019}
+  \item Oracle Cloud Infrastructure -- Architect \& Operations, Oracle DB 12c, Oracle Linux 6 \hfill \textcolor{muted}{2016 -- 2020}
+\end{itemize}
+
+% --- Education ---
+\section*{Education}
+\role{MSc in Computer Science and Engineering}{Politecnico di Milano \textbullet{} Communication and Society Engineering (English track)}{2009 -- 2016}
+\vspace{-2pt}
+Grade: 109/110. Thesis: \textit{Analysis of Approximation Techniques for Parallel Computing Applications}.
+
+% --- Languages ---
+\section*{Languages}
+Italian (native) \quad\textbullet\quad English (professional working proficiency, CEFR B2)
+
+\vfill
+{\scriptsize\color{muted}
+\textcopyright{} 2026 Silvio Valerio De Pasquale. Source: \href{https://github.com/svdepasquale/curriculum-vitae}{github.com/svdepasquale/curriculum-vitae}.\\
+I authorise the processing of my personal data contained in this CV in accordance with Regulation (EU) 2016/679 (GDPR) and Italian Legislative Decree 196/2003 as amended by D.Lgs. 101/2018.
+}
+
+\end{document}
